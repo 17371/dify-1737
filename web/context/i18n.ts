@@ -1,28 +1,24 @@
-import {
-  createContext,
-  useContext,
-} from 'use-context-selector'
-import type { Locale } from '@/i18n'
-import { getLanguage } from '@/i18n/language'
-import { noop } from 'lodash-es'
+import { createContext, useContext } from "use-context-selector";
+import type { Locale } from "@/i18n";
+import { getLanguage } from "@/i18n/language";
 
 type II18NContext = {
-  locale: Locale
-  i18n: Record<string, any>
-  setLocaleOnClient: (_lang: Locale, _reloadPage?: boolean) => void
-}
+  locale: Locale;
+  i18n: Record<string, any>;
+  setLocaleOnClient: (_lang: Locale, _reloadPage?: boolean) => void;
+};
 
 const I18NContext = createContext<II18NContext>({
-  locale: 'en-US',
+  locale: "zh-Hans",
   i18n: {},
-  setLocaleOnClient: noop,
-})
+  setLocaleOnClient: (_lang: Locale, _reloadPage?: boolean) => {},
+});
 
-export const useI18N = () => useContext(I18NContext)
+export const useI18N = () => useContext(I18NContext);
 export const useGetLanguage = () => {
-  const { locale } = useI18N()
+  const { locale } = useI18N();
 
-  return getLanguage(locale)
-}
+  return getLanguage(locale);
+};
 
-export default I18NContext
+export default I18NContext;
