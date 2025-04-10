@@ -1,11 +1,15 @@
-<div align="center">
-  <a href="https://cloud.dify.ai">Dify 云服务</a> ·
-  <a href="https://docs.dify.ai/getting-started/install-self-hosted">自托管</a> ·
-  <a href="https://docs.dify.ai">文档</a> 
-  <a href="https://github.com/17371/dify-1737">私人地址</a> 
-  
-</div>
+[Dify 云服务](https://cloud.dify.ai) ·
+[自托管](https://docs.dify.ai/getting-started/install-self-hosted) ·
+[文档](https://docs.dify.ai) ·
+[私人地址](https://github.com/17371/dify-1737)
 
-<div align="center"> 
-  <a href="./README_CN.md"><img alt="简体中文版自述文件" src="https://img.shields.io/badge/简体中文-d9d9d9"></a>
-</div>
+[![简体中文版自述文件](https://img.shields.io/badge/简体中文-d9d9d9)](./README_CN.md)
+
+
+## 更新docker
+```
+docker pull 17371/dify-1737
+cd docker 
+docker-compose pull
+docker-compose up -d
+```
