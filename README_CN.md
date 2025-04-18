@@ -36,6 +36,7 @@ git clone https://github.com/langgenius/dify.git --branch 0.15.3
 
 ```bash
 docker compose up -d
+docker-compose -p dify-1737 up -d
 ```
 
 - 如果您有 Docker Compose V1，请使用以下命令：
@@ -103,3 +104,34 @@ docker compose up -d
 ```
 
 可以在 docker/.env.example 下找到带注释的完整环境变量集。
+
+## 修改 web
+
+### 修改 web 文件
+
+### 换源，不需要
+
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+
+RUN pnpm install --frozen-lockfile --registry https://mirrors.huaweicloud.com/repository/npm/
+
+RUN pnpm add -g pm2 --registry https://mirrors.huaweicloud.com/repository/npm/ \
+ && mkdir /.pm2 \
+ && chown -R 1001:0 /.pm2 /app/web \
+ && chmod -R g=u /.pm2 /app/web
+
+### 编译 docker
+
+```
+cd ../web
+docker build . -t dify-1737-web.img:1.2.0
+```
+
+### 修改 image
+
+为打开 docker-compose.yaml 文件，并找到以下信息（大概在 500 行左右）
+
+```
+cd ../docker 
+docker compose up -d
+```

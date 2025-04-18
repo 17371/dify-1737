@@ -2,8 +2,8 @@
 FROM node:22-alpine3.21 AS base
 LABEL maintainer="takatost@gmail.com"
 
-# if you located in China, you can use aliyun mirror to speed up
-# RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+# 如果你在中国，你可以使用阿里云镜像来加速
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 RUN apk add --no-cache tzdata
 RUN npm install -g pnpm@10.8.0
@@ -19,10 +19,9 @@ WORKDIR /app/web
 COPY package.json .
 COPY pnpm-lock.yaml .
 
-# if you located in China, you can use taobao registry to speed up
-# RUN pnpm install --frozen-lockfile --registry https://registry.npmmirror.com/
-
-RUN pnpm install --frozen-lockfile
+# 如果你在中国，你可以使用淘宝注册来加速
+ RUN pnpm install --frozen-lockfile --registry https://registry.npmmirror.com/
+# RUN pnpm install --frozen-lockfile
 
 # build resources
 FROM base AS builder
@@ -63,7 +62,7 @@ COPY docker/entrypoint.sh ./entrypoint.sh
 
 
 # global runtime packages
-RUN pnpm add -g pm2 \
+RUN npm add -g pm2 \
     && mkdir /.pm2 \
     && chown -R 1001:0 /.pm2 /app/web \
     && chmod -R g=u /.pm2 /app/web
