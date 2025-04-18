@@ -103,7 +103,9 @@ celerybeat.pid
 *.sage.py
 
 # Environments 此分支需要同步的配置文件
-.env
+.env/
+.env.*
+.env.example
 .env-local
 .venv
 env/
@@ -207,3 +209,5 @@ plugins.jsonl
 
 # mise
 mise.toml
+docker/.env
+README_CN.md 
