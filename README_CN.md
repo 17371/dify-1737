@@ -1,7 +1,7 @@
 [Dify 云服务](https://cloud.dify.ai) ·
 [自托管](https://docs.dify.ai/getting-started/install-self-hosted) ·
 [文档](https://docs.dify.ai) ·
-[私人地址](https://github.com/17371/dify-1737/tree/from-dify-main)
+[私人地址](https://github.com/17371/dify-1737)
 
 [![简体中文版自述文件](https://img.shields.io/badge/简体中文-d9d9d9)](./README_CN.md)
 
@@ -125,13 +125,25 @@ RUN pnpm add -g pm2 --registry https://mirrors.huaweicloud.com/repository/npm/ \
 ```
 cd ../web
 docker build . -t dify-1737-web.img:1.2.0
+
 ```
 
 ### 修改 image
 
 为打开 docker-compose.yaml 文件，并找到以下信息（大概在 500 行左右）
+image: langgenius/dify-api:1.2.0
 
 ```
-cd ../docker 
+cd ../docker
 docker compose up -d
+```
+
+### 整体变更
+
+```
+cd ../web
+docker build . -t dify-1737-web.img:1.2.0
+cd ../docker
+docker compose up -d
+
 ```
