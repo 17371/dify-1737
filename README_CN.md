@@ -129,13 +129,38 @@ docker build . -t dify-1737-web.img:1.2.0
 ```
 
 ### 修改 image
-
-为打开 docker-compose.yaml 文件，并找到以下信息（大概在 500 行左右）
-image: langgenius/dify-api:1.2.0
+```
+docker tag langgenius/dify-api:1.2.0 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-api:1.2.0
+docker tag langgenius/dify-web:1.2.0 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-web:1.2.0
+docker tag postgres:15-alpine registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-postgres:15-alpine
+docker tag redis:6-alpine registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-redis:6-alpine
+docker tag langgenius/dify-sandbox:0.2.11 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-sandbox:0.2.11
+docker tag langgenius/dify-plugin-daemon:0.0.7-local registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-plugin-daemon:0.0.7-local
+docker tag ubuntu/squid:latest registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-squid:latest
+docker tag certbot/certbot registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-certbot:latest
+docker tag nginx:latest registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-nginx:latest
+docker tag semitechnologies/weaviate:1.19.0 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-weaviate:1.19.0
 
 ```
-cd ../docker
-docker compose up -d
+
+```
+docker tag langgenius/qdrant:v1.7.3 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-qdrant:v1.7.3
+docker tag pgvector/pgvector:pg16 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-pgvector:pg16
+docker tag tensorchord/pgvecto-rs:pg16-v0.3.0 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-pgvecto-rs:pg16-v0.3.0
+docker tag ghcr.io/chroma-core/chroma:0.5.20 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-chroma:0.5.20
+docker tag oceanbase/oceanbase-ce:4.3.5.1-101000042025031818 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-oceanbase-ce:4.3.5.1-101000042025031818
+docker tag container-registry.oracle.com/database/free:latest registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-oracle-database-free:latest
+docker tag quay.io/coreos/etcd:v3.5.5 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-etcd:v3.5.5
+docker tag minio/minio:RELEASE.2023-03-20T20-16-18Z registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-minio:RELEASE.2023-03-20T20-16-18Z
+docker tag milvusdb/milvus:v2.5.0-beta registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-milvus:v2.5.0-beta
+docker tag opensearchproject/opensearch:latest registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-opensearch:latest
+docker tag opensearchproject/opensearch-dashboards:latest registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-opensearch-dashboards:latest
+docker tag opengauss/opengauss:7.0.0-RC1 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-opengauss:7.0.0-RC1
+docker tag myscale/myscaledb:1.6.4 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-myscaledb:1.6.4
+docker tag docker.elastic.co/elasticsearch/elasticsearch:8.14.3 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-elasticsearch:8.14.3
+docker tag docker.elastic.co/kibana/kibana:8.14.3 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-kibana:8.14.3
+docker tag downloads.unstructured.io/unstructured-io/unstructured-api:latest registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-unstructured-api:latest
+
 ```
 
 ### 整体变更
