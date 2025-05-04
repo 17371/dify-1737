@@ -131,11 +131,17 @@ docker build . -t dify-1737-web.img:1.2.0
 ### 修改 image
 ```
 docker tag langgenius/dify-api:1.2.0 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-api:1.2.0
+docker push registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-api:1.2.0
 docker tag langgenius/dify-web:1.2.0 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-web:1.2.0
+docker push registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-web:1.2.0
 docker tag postgres:15-alpine registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-postgres:15-alpine
+docker push registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-postgres:15-alpine
 docker tag redis:6-alpine registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-redis:6-alpine
+docker push registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-redis:6-alpine
 docker tag langgenius/dify-sandbox:0.2.11 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-sandbox:0.2.11
+docker push registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-sandbox:0.2.11
 docker tag langgenius/dify-plugin-daemon:0.0.7-local registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-plugin-daemon:0.0.7-local
+docker push registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-plugin-daemon:0.0.7-local
 docker tag ubuntu/squid:latest registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-squid:latest
 docker tag certbot/certbot registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-certbot:latest
 docker tag nginx:latest registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-nginx:latest
