@@ -36,13 +36,20 @@ const LocaleLayout = async ({ children }: { children: React.ReactNode }) => {
       <body
         className="color-scheme h-full select-auto"
         data-api-prefix={process.env.NEXT_PUBLIC_API_PREFIX}
+        data-web-prefix={process.env.NEXT_PUBLIC_WEB_PREFIX}
         data-pubic-api-prefix={process.env.NEXT_PUBLIC_PUBLIC_API_PREFIX}
+<<<<<<< HEAD
         data-marketplace-api-prefix={
           process.env.NEXT_PUBLIC_MARKETPLACE_API_PREFIX
         }
         data-marketplace-url-prefix={
           process.env.NEXT_PUBLIC_MARKETPLACE_URL_PREFIX
         }
+=======
+        data-pubic-web-prefix={process.env.NEXT_PUBLIC_PUBLIC_WEB_PREFIX}
+        data-marketplace-api-prefix={process.env.NEXT_PUBLIC_MARKETPLACE_API_PREFIX}
+        data-marketplace-url-prefix={process.env.NEXT_PUBLIC_MARKETPLACE_URL_PREFIX}
+>>>>>>> main
         data-public-edition={process.env.NEXT_PUBLIC_EDITION}
         data-public-support-mail-login={
           process.env.NEXT_PUBLIC_SUPPORT_MAIL_LOGIN
@@ -60,6 +67,7 @@ const LocaleLayout = async ({ children }: { children: React.ReactNode }) => {
           process.env.NEXT_PUBLIC_MAX_PARALLEL_LIMIT
         }
         data-public-top-k-max-value={process.env.NEXT_PUBLIC_TOP_K_MAX_VALUE}
+<<<<<<< HEAD
         data-public-indexing-max-segmentation-tokens-length={
           process.env.NEXT_PUBLIC_INDEXING_MAX_SEGMENTATION_TOKENS_LENGTH
         }
@@ -69,6 +77,14 @@ const LocaleLayout = async ({ children }: { children: React.ReactNode }) => {
         data-public-max-iterations-num={
           process.env.NEXT_PUBLIC_MAX_ITERATIONS_NUM
         }
+=======
+        data-public-indexing-max-segmentation-tokens-length={process.env.NEXT_PUBLIC_INDEXING_MAX_SEGMENTATION_TOKENS_LENGTH}
+        data-public-loop-node-max-count={process.env.NEXT_PUBLIC_LOOP_NODE_MAX_COUNT}
+        data-public-max-iterations-num={process.env.NEXT_PUBLIC_MAX_ITERATIONS_NUM}
+        data-public-enable-website-jinareader={process.env.NEXT_PUBLIC_ENABLE_WEBSITE_JINAREADER}
+        data-public-enable-website-firecrawl={process.env.NEXT_PUBLIC_ENABLE_WEBSITE_FIRECRAWL}
+        data-public-enable-website-watercrawl={process.env.NEXT_PUBLIC_ENABLE_WEBSITE_WATERCRAWL}
+>>>>>>> main
       >
         <BrowserInitor>
           <SentryInitor>

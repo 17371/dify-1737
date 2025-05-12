@@ -3,7 +3,16 @@
 [文档](https://docs.dify.ai) ·
 [私人地址](https://github.com/17371/dify-1737)
 
+<<<<<<< HEAD
 [![简体中文版自述文件](https://img.shields.io/badge/简体中文-d9d9d9)](./README_CN.md)
+=======
+<div align="center">
+  <a href="https://cloud.dify.ai">Dify 云服务</a> ·
+  <a href="https://docs.dify.ai/getting-started/install-self-hosted">自托管</a> ·
+  <a href="https://docs.dify.ai">文档</a> ·
+  <a href="https://dify.ai/pricing">Dify 产品形态总览</a>
+</div>
+>>>>>>> main
 
 ### 克隆 Dify
 
@@ -124,24 +133,24 @@ RUN pnpm add -g pm2 --registry https://mirrors.huaweicloud.com/repository/npm/ \
 
 ```
 cd ../web
-docker build . -t dify-1737-web.img:1.2.0
+docker build . -t dify-1737-web.img:1.3.1
 
 ```
 
 ### 修改 image
 ```
-docker tag langgenius/dify-api:1.2.0 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-api:1.2.0
-docker push registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-api:1.2.0
-docker tag langgenius/dify-web:1.2.0 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-web:1.2.0
-docker push registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-web:1.2.0
+docker tag langgenius/dify-api:1.3.1 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-api:1.3.1
+docker push registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-api:1.3.1
+docker tag langgenius/dify-web:1.3.1 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-web:1.3.1
+docker push registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-web:1.3.1
 docker tag postgres:15-alpine registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-postgres:15-alpine
 docker push registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-postgres:15-alpine
 docker tag redis:6-alpine registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-redis:6-alpine
 docker push registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-redis:6-alpine
 docker tag langgenius/dify-sandbox:0.2.11 registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-sandbox:0.2.11
 docker push registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-sandbox:0.2.11
-docker tag langgenius/dify-plugin-daemon:0.0.7-local registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-plugin-daemon:0.0.7-local
-docker push registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-plugin-daemon:0.0.7-local
+docker tag langgenius/dify-plugin-daemon:0.0.9-local registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-plugin-daemon:0.0.9-local
+docker push registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-dify-plugin-daemon:0.0.9-local
 docker tag ubuntu/squid:latest registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-squid:latest
 docker tag certbot/certbot registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-certbot:latest
 docker tag nginx:latest registry.cn-hangzhou.aliyuncs.com/mymiddle/dify1737-nginx:latest
@@ -173,7 +182,7 @@ docker tag downloads.unstructured.io/unstructured-io/unstructured-api:latest reg
 
 ```
 cd ../web
-docker build . -t dify-1737-web.img:1.2.0
+docker build . -t dify-1737-web.img:1.3.1
 cd ../docker
 docker compose up -d
 
